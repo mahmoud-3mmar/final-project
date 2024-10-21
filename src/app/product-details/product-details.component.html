@@ -1,0 +1,39 @@
+<div class="h-100 bg-D py-5">
+  <section class="container h-100 d-flex align-items-center py-5 my-5">
+    <div class="row m-auto">
+      <div class="col-12 col-md-8">
+        <div class="border border-black rounded-5 bg-white p-5">
+          <h3 class="main_color mb-4">{{details.title}}</h3>
+          <p class="fw-bold main_color"> authors : {{details.authors[0].name}}</p>
+          
+          <p class="text-danger fw-bold"><span class="text-black">Dawnload count:</span> {{details.download_count}} </p>
+          <p class="fw-bold text-danger"><span class="text-black"> Media type :</span>  {{details.media_type}}</p>
+          <div class="w-100 mt-5">
+            <p class="w-100 text-end">
+              <a class="text-decoration-none main_color fs-4 m-auto" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Show subjects <i class="fa-solid fa-pen-fancy"></i>
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+              @for (s of details.subjects; track s.index) {
+                <div class="card card-body bg-card my-2 p-3">
+                  <p>{{s}}</p>
+                </div>
+              }
+            </div>
+          </div>
+          <a href="{{details.formats['text/html']}}">
+            <button class="btn  btn-warning">reading now</button>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="image border border-black rounded-5 bg-white mt-5 mt-md-0 overflow-hidden">
+          <img src="{{details.formats['image/jpeg']}}" class="w-100 h-100" alt="image">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+

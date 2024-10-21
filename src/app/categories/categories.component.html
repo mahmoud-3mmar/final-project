@@ -1,0 +1,60 @@
+<section class="pt-5">
+  <div class="container">
+  <div class="d-flex justify-content-center align-items-center flex-column flex-md-row pb-5">
+    <div class=" py-3 text-center w-75 m-auto ">
+      <input type="search" (input)="search(dataForm)" [(ngModel)]="dataForm" class="form-control placeholder-sm rounded-4 ps-5 shadow-none" name="search" id="searchID" placeholder="Search by book">
+    </div>
+  </div>
+
+  @if (mybook == undefined || mybook.length == 0 || dataForm == "") {
+    <div>
+      <h2 class="text-center mb-3"> books </h2>
+    </div>
+    <div class="row">
+    <div class="col-lg-4 col-md-6 col-12 p-5" *ngFor="let book of categories">
+      <div class="card h_570px position-relative">
+        <div class="h_400px">
+          <img src="{{book.formats['image/jpeg']}}" alt="{{book.title}}" class="w-100 h-100">
+        </div>
+        <i class="save fs-4 position-absolute top-0 end-0 m-2 fa-regular fa-heart" (click)="addBookToFavorite(book)"></i>
+        @if(find(book)){
+          <i class="save fs-2  position-absolute top-0 end-0 my-1 mx-2 fa-solid fa-heart" (click)="removeBookToFavorite(book)"></i>
+        }
+        <div class="card-body">
+          <h5 class="card-title">{{ book.title }}</h5>
+          <p class="card-text">{{ book.authors[0]?.name || 'Unknown Author' }}</p>
+          <button class="btn btn-outline-warning" [routerLink]="['/details' , book.id]"> view details </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+  @else{
+    <div>
+      <h2 class="text-center mb-3"> Result </h2>
+    </div>
+    <div class="row">
+    <div class="col-lg-4 col-md-6 col-12 p-5" *ngFor="let book of mybook">
+      <div class="card h_570px position-relative">
+        <div class="h_400px">
+          <img src="{{book.formats['image/jpeg']}}" alt="{{book.title}}" class="w-100 h-100">
+        </div>
+        <i class="save fs-4 gold_color position-absolute top-0 end-0 m-2 fa-regular fa-heart" (click)="addBookToFavorite(book)"></i>
+        @if(find(book)){
+          <i class="save fs-2 gold_color position-absolute top-0 end-0 my-1 mx-2 fa-solid fa-heart" (click)="removeBookToFavorite(book)"></i>
+        }
+        <div class="card-body">
+          <h5 class="card-title">{{ book.title }}</h5>
+          <p class="card-text">{{ book.authors[0]?.name || 'Unknown Author' }}</p>
+          <button class="btn btn-outline-warning" [routerLink]="['/details' , book.id]"> view details </button>
+        </div>
+      </div>
+    </div>
+    </div>
+  }
+  </div>
+</section>
+
+
+
+

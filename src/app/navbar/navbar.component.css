@@ -1,0 +1,278 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --mainColor: #6e4b29;
+  --fontColor: #bf8e60;
+} */
+
+/* start of navbar */
+/* .active1{
+  text-decoration: underline !important;
+  text-underline-offset: 7px !important;
+  color: #fcc38a !important;
+}
+.content {
+  width: 90%;
+  margin: auto;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  padding: 0 20px;
+  height: 70px;
+  width: 100%;
+  background-color: #6e4b2977;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar {
+  height: 70px;
+}
+.menu-toggle {
+  display: none;
+}
+.navbar img {
+  width: 100px;
+  height: 50px;
+}
+.form-search{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 40%;
+}
+
+.search-box{
+  background-color: transparent;
+  border: 3px solid #6e4b2977;
+  padding: 10px;
+  border-radius: 50px;
+  outline: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.search-box svg {
+  position: absolute;
+  right: 10px;
+  color: #6e4b29;
+}
+.btn-theme{
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  background-color: #6e4b29;
+  border-color: #6e4b29;
+  outline-style: none;
+}
+.navlist ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navlist ul li {
+  margin: 0 15px;
+}
+
+.navlist ul li a {
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.night svg {
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.style{
+  color: #fff;
+  background-color: #6e4b29;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+ 
+} */
+
+/* end of navbar */
+/* .navlist ul li a.active-link {
+  color: #6e4b29 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+} */
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --mainColor: #6e4b29;
+  --fontColor: #bf8e60;
+}
+
+/* start of navbar */
+.active1 {
+  text-decoration: underline !important;
+  text-underline-offset: 7px !important;
+  color: #fcc38a !important;
+}
+
+.content {
+  width: 90%;
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  padding: 0 20px;
+  height: 70px;
+  width: 100%;
+  background-color: #6e4b2977;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  height: 70px;
+}
+
+.menu-toggle {
+  display: none; /* مخفي افتراضيًا، سيظهر فقط في الشاشات الصغيرة */
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.navbar img {
+  width: 100px;
+  height: 50px;
+}
+
+.form-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 40%;
+}
+
+.search-box {
+  background-color: transparent;
+  border: 3px solid #6e4b2977;
+  padding: 10px;
+  border-radius: 50px;
+  outline: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.search-box svg {
+  position: absolute;
+  right: 10px;
+  color: #6e4b29;
+}
+
+.btn-theme {
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  background-color: #6e4b29;
+  border-color: #6e4b29;
+  outline-style: none;
+}
+
+.navlist ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navlist ul li {
+  margin: 0 15px;
+}
+
+.navlist ul li a {
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.night svg {
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.style {
+  color: #fff;
+  background-color: #6e4b29;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+/* end of navbar */
+.navlist ul li a.active-link {
+  color: #6e4b29 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* يظهر زر الهامبرغر في الشاشات الصغيرة */
+  }
+
+  .navlist ul {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background-color: var(--mainColor);
+    transition: all 0.3s ease;
+  }
+
+  .navlist ul.show {
+    left: 0; /* إظهار القائمة عند الضغط على زر الهامبرغر */
+  }
+
+  .navlist ul li {
+    margin: 20px 0;
+  }
+
+  .form-search {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+

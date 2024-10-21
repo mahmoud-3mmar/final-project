@@ -1,0 +1,24 @@
+<header class="z-3">
+  <div class="navbar">
+    <div class="content">
+      <div class="nav">
+        <div class="logo">
+          <img
+            src="../../assets/images/logoo.png"alt="logo"/>
+        </div>
+        <div class="navlist">
+          <ul>
+            <li><a routerLink='/home' routerLinkActive="active-link" *ngIf="logined">Home</a></li>
+            <li><a routerLink='/about'  routerLinkActive="active-link" *ngIf="logined">About</a></li>
+            <li><a routerLink='/categories'routerLinkActive="active-link" *ngIf="logined">Categories</a></li>
+            <li><a routerLink='/favorite' routerLinkActive="active-link" *ngIf="logined">Favorite</a></li>
+            <li><a routerLink='/contact-us' routerLinkActive="active-link" *ngIf="!logined">Sign</a></li>
+            <li><a routerLink='/login' routerLinkActive="active-link" *ngIf="!logined">Login</a></li>
+          </ul>
+        </div>
+        <button class="btn btn-outline-dark  style" (click)="logOut()" *ngIf="logined" >Log Out</button>
+      </div>
+    </div>
+  </div>
+</header>
+

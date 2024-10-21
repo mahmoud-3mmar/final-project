@@ -1,0 +1,52 @@
+<!-- ============================ -->
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+  <div class="loginform">
+    <div class="login_box">
+          <div class="login-header">
+            <span>SignUp</span>
+          </div>
+          <div class="input_box">
+              <input type="text" id="user" class="input-field" required formControlName="firstName">
+              <label for="" class="label">First Name</label>
+              <i class="bx bx-user icons"></i>
+              <!-- Validation message -->
+              <div class="alert alert-danger p-3" role="alert"
+                   *ngIf="registerForm.controls['firstName'].invalid && registerForm.controls['firstName'].touched">
+                Please enter a valid Username (3-10 characters, starting with a capital letter).
+              </div>
+           </div>
+          <div class="input_box">
+              <input type="text" id="user" class="input-field" required formControlName="lastName">
+              <label for="user" class="label">Last Name</label>
+              <i class="bx bx-user icons"></i>
+              <div class="alert alert-danger p-3" role="alert"
+              *ngIf="registerForm.controls['lastName'].invalid && registerForm.controls['lastName'].touched">
+           Please enter a valid Username (3-10 characters, starting with a capital letter).
+         </div>
+           </div>
+          <div class="input_box">
+              <input type="text" id="user" class="input-field" required formControlName="age">
+              <label for="user" class="label">Age</label>
+              <i class="bx bx-user icons"></i>
+           </div>
+           <div class="input_box">
+              <input type="email" id="user" class="input-field" required formControlName="email">
+              <label for="user" class="label"> Email</label>
+              <i class='bx bx-envelope icons'></i>
+           </div>
+           <div class="input_box">
+              <input type="password" id="user" class="input-field" required formControlName="password">
+              <label for="user" class="label"> Password</label>
+              <i class="bx bx-lock-alt icons"></i>
+              <!-- Password validation message -->
+      <div class="alert alert-danger p-3"
+           *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+        Password must be at least 8 characters long and contain both letters and numbers.
+      </div>
+           </div>
+           <div class="remember-forget">
+               <input type="submit"  class="input-submit" value="Register" [disabled]="registerForm.invalid&&registerForm.touched">
+           </div>
+    </div>
+</div>
+</form>

@@ -1,0 +1,26 @@
+<div class="container">
+  <form class="loginform" [formGroup]="loginUser" (ngSubmit)="loginData(loginUser)">
+    <div class="login_box">
+      <div class="login-header">
+        <span>Login</span>
+      </div>
+      <div class="input_box">
+    <label for="">User Name:</label>
+    <input type="text" name="" id="" formControlName="username" class="form-control input-field">
+    <i class="bx bx-user icons"></i>
+      </div>
+      <div class="input_box">
+    <label for="">Password:</label>
+    <input type="text" name="" id="" formControlName="password" class="form-control input-field">
+    <i class="bx bx-lock-alt icons"></i>
+    </div>
+    <div class="remember-forget">
+      <div class="remember-me">
+        <input type="checkbox" id="remember">
+        <label for="remember"> Remember me</label>
+      </div>
+    </div>
+ <div class="input_box"><button class="btn btn-success mt-2 input-submit">Login</button></div>
+  </div>
+  </form>
+</div>
